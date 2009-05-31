@@ -1,0 +1,11 @@
+--- data/es/titleWidgets~	2009-02-01 12:34:45.000000000 +0100
++++ data/es/titleWidgets	2009-03-02 09:52:35.000000000 +0100
+@@ -6,7 +6,7 @@
+ BUTTON quit mainMenu "Salir" "*" -1 390 0 0
+ 
+ LABEL label help "Para las instrucciones del juego, mira el manual del" "*" -1 260 0 0
+-LABEL label help "juego instalado en la siguiente localización," "*" -1 290 0 0
++LABEL label help "juego instalado en la siguiente localización:" "*" -1 290 0 0
+ LABEL labelManual help "/usr/share/doc/blobwars/manual.html" "*" -1 320 0 0
+ LABEL labelManual help "(actualmente sólo en inglés)" "*" -1 350 0 0
+ 
