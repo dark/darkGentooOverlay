@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r1.ebuild,v 1.1 2009/03/30 18:12:47 graaff Exp $
+# $Header: /var/www/viewcvs.gentoo.org/raw_cvs/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r1.ebuild,v 1.6 2009/06/03 08:19:54 fauli Exp $
 
 inherit gnome2 multilib flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="A GNOME trayicon which checks for email, with support for many onli
 HOMEPAGE="http://www.nongnu.org/mailnotify/"
 SRC_URI="http://savannah.nongnu.org/download/mailnotify/${P}.tar.bz2"
 
-KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 SLOT="0"
 LICENSE="GPL-3"
 
@@ -39,7 +39,7 @@ RDEPEND=">=x11-libs/gtk+-2.12
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	evo? ( >=mail-client/evolution-2.24 )
-	sylpheed? ( virtual/sylpheed )"
+	sylpheed? ( mail-client/sylpheed )"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
