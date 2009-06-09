@@ -1,0 +1,22 @@
+
+>=app-editors/gedit-2.15.2 dev-python/gnome-python dev-python/dbus-python dev-tex/rubber
+0
+mirror://sourceforge/gedit-latex/LaTeXPlugin-0.2rc1.tar.gz
+
+http://live.gnome.org/Gedit/LaTeXPlugin
+GPL-2
+LaTeX plugin for gedit
+~amd64 ~ppc ~x86
+alternatives eutils multilib portability python toolchain-funcs
+
+
+
+
+
+
+compile install postinst postrm setup
+
+
+
+
+
