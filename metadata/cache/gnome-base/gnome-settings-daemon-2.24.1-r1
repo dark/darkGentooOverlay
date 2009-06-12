@@ -6,7 +6,7 @@ mirror://gnome/sources/gnome-settings-daemon/2.24/gnome-settings-daemon-2.24.1.t
 http://www.gnome.org
 GPL-2
 Gnome Settings Daemon
-alpha amd64 ~arm ~hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd
+alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd
 autotools eutils fdo-mime gnome.org gnome2 gnome2-utils libtool multilib portability toolchain-funcs
 alsa debug esd gstreamer libnotify pulseaudio debug
 
