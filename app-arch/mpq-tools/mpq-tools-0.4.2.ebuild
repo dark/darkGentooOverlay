@@ -6,7 +6,7 @@ EAPI="2"
 
 inherit libtool
 
-DESCRIPTION="Library for manipulating mpq archives"
+DESCRIPTION="Tool for retrieving information and extracting data from mpq archives"
 HOMEPAGE="https://libmpq.org/wiki/MpqTools"
 SRC_URI="https://libmpq.org/downloader/download/file/4/${P}.tar.gz"
 
