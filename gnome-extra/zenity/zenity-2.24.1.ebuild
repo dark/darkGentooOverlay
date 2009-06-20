@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-2.24.1.ebuild,v 1.8 2009/04/27 14:22:46 jer Exp $
 
-inherit gnome2
+inherit eutils autotools gnome2
 
 DESCRIPTION="Tool to display dialogs from the commandline and shell scripts"
 HOMEPAGE="http://www.gnome.org/"
