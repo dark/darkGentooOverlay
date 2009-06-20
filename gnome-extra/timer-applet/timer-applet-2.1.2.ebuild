@@ -23,7 +23,7 @@ DEPEND="|| ( ( virtual/python:2.4 dev-python/elementtree )
 	>=dev-python/dbus-python-0.8"
 RDEPEND="${DEPEND}"
 
-DOCS="AUTHORS Changelog NEWS README"
+DOCS="AUTHORS ChangeLog COPYING NEWS README"
 
 src_unpack() {
 	gnome2_src_unpack
