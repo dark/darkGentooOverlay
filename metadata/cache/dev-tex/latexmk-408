@@ -1,0 +1,22 @@
+virtual/latex-base dev-lang/perl app-arch/unzip
+virtual/latex-base dev-lang/perl
+0
+http://www.phys.psu.edu/~collins/software/latexmk/latexmk-408.zip
+
+http://www.phys.psu.edu/~collins/software/latexmk/
+GPL-2
+Perl script for automatically building LaTeX documents.
+~amd64 ~x86
+
+
+
+
+
+
+
+install
+
+
+
+
+
