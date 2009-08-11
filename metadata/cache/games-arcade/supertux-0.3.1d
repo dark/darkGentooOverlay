@@ -1,20 +1,20 @@
 virtual/opengl media-libs/libsdl media-libs/sdl-image dev-games/physfs media-libs/openal >=dev-util/cmake-2.6.2-r1 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 virtual/opengl media-libs/libsdl media-libs/sdl-image dev-games/physfs media-libs/openal
 2
-http://download.berlios.de/supertux/supertux-0.3.1d.tar.bz2
+mirror://berlios//supertux/supertux-0.3.1d.tar.bz2
 mirror
 http://supertux.lethargik.org/
 GPL-2
 Classic 2D jump'n run sidescroller game similar to SuperMario: Milestone 2
-amd64 x86
+~x86
 base cmake-utils eutils flag-o-matic games multilib portability toolchain-funcs
 
 
 
 
+2
 
-
-compile install postinst preinst setup test unpack
+compile configure install postinst preinst prepare setup test unpack
 
 
 
