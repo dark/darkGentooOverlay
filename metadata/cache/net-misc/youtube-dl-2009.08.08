@@ -1,0 +1,22 @@
+>=dev-lang/python-2.4
+>=dev-lang/python-2.4
+0
+http://bitbucket.org/rg3/youtube-dl/get/2009.08.08.bz2 -> youtube-dl-2009.08.08.tar.bz2
+
+http://bitbucket.org/rg3/youtube-dl/
+MIT
+A small command-line program to download videos from YouTube.
+~amd64 ~hppa ~ppc ~ppc64 ~x86
+
+
+
+
+
+2
+
+install
+
+
+
+
+
