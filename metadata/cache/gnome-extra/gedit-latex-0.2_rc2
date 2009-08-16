@@ -7,7 +7,7 @@ http://live.gnome.org/Gedit/LaTeXPlugin
 GPL-2
 LaTeX plugin for gedit
 ~amd64 ~ppc ~x86
-alternatives eutils multilib portability python toolchain-funcs
+eutils multilib portability python toolchain-funcs
 
 
 

@@ -7,7 +7,7 @@ http://www.exaile.org
 GPL-2
 a media player aiming to be similar to AmaroK, but for GTK+
 amd64 ppc ~sparc x86
-alternatives eutils fdo-mime multilib portability python toolchain-funcs
+eutils fdo-mime multilib portability python toolchain-funcs
 aac alsa cdparanoia flac gnome ipod +jpeg libnotify +libsexy mad musepack mtp nls ogg oss +png vorbis
 
 
