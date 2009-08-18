@@ -1,0 +1,22 @@
+>=dev-lang/python-2.2 virtual/latex-base virtual/python
+>=dev-lang/python-2.2 virtual/latex-base
+0
+http://iml.univ-mrs.fr/~beffara/soft/rubber/rubber-20080323.tar.gz
+
+http://iml.univ-mrs.fr/~beffara/soft/rubber/
+GPL-2
+A LaTeX wrapper for automatically building documents
+~amd64 ~ppc ~x86
+distutils eutils multilib portability python toolchain-funcs
+
+
+
+
+
+
+compile install postinst postrm unpack
+
+
+
+
+
