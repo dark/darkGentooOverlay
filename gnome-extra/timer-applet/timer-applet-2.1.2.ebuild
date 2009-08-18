@@ -15,7 +15,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc sounds libnotify"
 
 DEPEND="|| ( ( virtual/python:2.4 dev-python/elementtree )
-		virtual/python:2.5 )
+		virtual/python:2.5
+		virtual/python:2.6 )
 	>=dev-python/pygtk-2.10
 	>=dev-python/gnome-python-2.16
 	>=dev-python/gnome-python-desktop-2.16
