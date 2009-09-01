@@ -1,4 +1,4 @@
-
+>=app-shells/bash-3.2
 >=app-editors/gedit-2.15.2[python] dev-python/gnome-python dev-python/dbus-python dev-tex/rubber
 0
 mirror://sourceforge/gedit-latex/LaTeXPlugin-0.2rc2.tar.gz
