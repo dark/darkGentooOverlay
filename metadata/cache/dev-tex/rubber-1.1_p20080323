@@ -1,5 +1,5 @@
 >=dev-lang/python-2.2 virtual/latex-base >=app-shells/bash-3.2 virtual/python
->=dev-lang/python-2.2 virtual/latex-base
+>=dev-lang/python-2.2 virtual/latex-base virtual/python
 0
 http://iml.univ-mrs.fr/~beffara/soft/rubber/rubber-20080323.tar.gz
 
