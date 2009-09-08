@@ -55,14 +55,14 @@ src_compile() {
 
 	if use gtk ; then
 		myconf="--enable-monolithic
-			--enable-alc"
-		use stats && myconf="${myconf} --enable-wxcas"
-		use remote && myconf="${myconf} --enable-amule-gui"
+			--enable-alc
+			$(use_enable stats wxcas)
+			$(use_enable remote amule-gui)"
 	else
 		myconf="--disable-monolithic
-			--disable-amule-gui
+			--disable-alc
 			--disable-wxcas
-			--disable-alc"
+			--disable-amule-gui"
 	fi
 
         econf \
@@ -89,7 +89,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if use amuled; then
+	if use daemon; then
 		newconfd ${FILESDIR}/amuled.confd amuled
 		newinitd ${FILESDIR}/amuled.initd amuled
 	fi
