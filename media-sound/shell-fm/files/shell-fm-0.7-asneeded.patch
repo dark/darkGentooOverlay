@@ -1,0 +1,11 @@
+--- source/Makefile	2009-09-27 14:38:44.000000000 +0200
++++ source/Makefile	2009-09-27 14:40:19.000000000 +0200
+@@ -40,7 +40,7 @@
+ 	$(AR) -cvq $(STATIC) $(OBJECT)
+ 
+ $(BINARY)	: $(STATIC)
+-	$(CC) -o $(BINARY) $(CFLAGS) $(MAIN) $(LDFLAGS) $(STATIC)
++	$(CC) -o $(BINARY) $(CFLAGS) $(MAIN) $(STATIC) $(LDFLAGS)
+ 
+ clean		:
+ 	rm -f $(OBJECT) $(BINARY) $(LIB) $(STATIC)
