@@ -18,11 +18,13 @@ else
 	S=${WORKDIR}/${MY_P}
 fi
 
+DIBARCHIVE="dibeng_max-1.1.26.zip"
+
 GV="1.0.0-x86"
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}
-	dibengine? ( http://dark.asengard.net/mirror/gentoo/distfiles/dibeng_max.zip )
+	dibengine? ( http://dark.asengard.net/mirror/gentoo/distfiles/${DIBARCHIVE} )
 	gecko? ( mirror://sourceforge/wine/wine_gecko-${GV}.cab )"
 
 LICENSE="LGPL-2.1"
@@ -92,7 +94,7 @@ src_unpack() {
 	fi
 
 	if use dibengine ; then
-		unpack dibeng_max.zip
+		unpack ${DIBARCHIVE}
 	fi
 }
 
