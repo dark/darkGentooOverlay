@@ -1,0 +1,11 @@
+--- configure.ac.old	2009-10-09 12:54:10.000000000 -0300
++++ configure.ac	2009-10-09 12:53:40.000000000 -0300
+@@ -182,7 +181,7 @@ AM_GNU_GETTEXT([external])
+ #                           GNOME support                            #
+ ######################################################################
+ if test "$OPT_USEGNOME" = "yes"; then
+-  PKG_CHECK_MODULES(GNOME_PANEL_DEP,libpanelapplet-2.0, [
++  PKG_CHECK_MODULES(GNOME_PANEL_DEP,[libpanelapplet-2.0 libgnomeui-2.0], [
+ 	AC_SUBST(GNOME_PANEL_DEP_CFLAGS)
+ 	AC_SUBST(GNOME_PANEL_DEP_LIBS)
+ 	AH_TEMPLATE([USE_GNOME])
