@@ -1,0 +1,22 @@
+app-text/scrollkeeper >=app-text/gnome-doc-utils-0.5.6 >=dev-util/pkgconfig-0.9 test? ( ~app-text/docbook-xml-dtd-4.1.2 ~app-text/docbook-xml-dtd-4.3 ) >=sys-apps/sed-4
+
+0
+mirror://gnome/sources/gnome-user-docs/2.28/gnome-user-docs-2.28.0.tar.bz2
+
+http://www.gnome.org/
+FDL-1.1
+GNOME end user documentation
+~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd
+fdo-mime gnome.org gnome2 gnome2-utils libtool multilib toolchain-funcs
+test
+
+
+
+
+
+compile install postinst postrm preinst setup unpack
+
+
+
+
+
