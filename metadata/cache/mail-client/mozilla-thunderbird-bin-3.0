@@ -7,14 +7,14 @@ http://www.mozilla.com/thunderbird
 || ( MPL-1.1 GPL-2 LGPL-2.1 )
 Thunderbird Mail Client
 -* ~amd64 ~x86
-eutils mozextension mozilla-launcher multilib nsplugins portability toolchain-funcs
+eutils mozextension multilib portability toolchain-funcs
 linguas_af linguas_ar linguas_be linguas_ca linguas_cs linguas_de linguas_el linguas_en_US linguas_en linguas_es_AR linguas_es_ES linguas_es linguas_et linguas_eu linguas_fi linguas_fr linguas_fy_NL linguas_fy linguas_ga_IE linguas_ga linguas_hu linguas_id linguas_is linguas_it linguas_ja linguas_ko linguas_lt linguas_nb_NO linguas_nb linguas_nl linguas_nn_NO linguas_nn linguas_pa_IN linguas_pa linguas_pl linguas_pt_BR linguas_pt linguas_ro linguas_ru linguas_si linguas_sk linguas_sv_SE linguas_sv linguas_uk
 
 
 
 2
 
-install postinst postrm setup unpack
+install postinst setup unpack
 
 
 

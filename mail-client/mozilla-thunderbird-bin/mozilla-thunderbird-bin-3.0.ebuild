@@ -3,12 +3,12 @@
 # $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-3.0_beta4.ebuild,v 1.3 2009/11/02 08:20:36 nirbheek Exp $
 EAPI="2"
 
-inherit eutils mozilla-launcher multilib mozextension
+inherit eutils multilib mozextension
 
 LANGS="af ar be ca cs de el en-US es-AR es-ES et eu fi fr fy-NL ga-IE hu id is it ja ko lt nb-NO nl nn-NO pa-IN pl pt-BR ro ru si sk sv-SE uk"
 NOSHORTLANGS="es-AR"
 
-MY_PV="${PV}"
+MY_PV="${PV/_beta/b}"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Thunderbird Mail Client"
@@ -89,9 +89,6 @@ src_unpack() {
 	for X in ${linguas}; do
 		[[ ${X} != en ]] && xpi_unpack "${P/-bin}-${X}.xpi"
 	done
-	if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
-		einfo "Selected language packs (first will be default): ${linguas}"
-	fi
 }
 
 src_install() {
@@ -106,17 +103,9 @@ src_install() {
 		[[ ${X} != en ]] && xpi_install ${WORKDIR}/${P/-bin}-${X}
 	done
 
-	local LANG=${linguas%% *}
-	if [[ ${LANG} != "" && ${LANG} != "en" ]]; then
-		ebegin "Setting default locale to ${LANG}"
-		sed -i "s:pref(\"general.useragent.locale\", \"en-US\"):pref(\"general.useragent.locale\", \"${LANG}\"):" \
-			"${D}"${MOZILLA_FIVE_HOME}/defaults/pref/all-thunderbird.js \
-			"${D}"${MOZILLA_FIVE_HOME}/defaults/pref/all-l10n.js
-		eend $? || die "sed failed to change locale"
-	fi
-
-	# Install /usr/bin/thunderbird-bin
-	make_wrapper thunderbird-bin "${MOZILLA_FIVE_HOME}/thunderbird"
+	# Create symbolic link /usr/bin/thunderbird-bin
+	dodir /usr/bin
+	dosym "${MOZILLA_FIVE_HOME}/thunderbird" /usr/bin/thunderbird-bin
 
 	# Install icon and .desktop for menu entry
 	doicon "${FILESDIR}"/icon/${PN}-icon.png
@@ -128,14 +117,16 @@ src_install() {
 
 	# install ldpath env.d
 	doenvd "${FILESDIR}"/71thunderbird-bin
+
+	# Enable very specific settings for thunderbird-3
+	cp "${FILESDIR}"/thunderbird-gentoo-default-prefs.js \
+		"${D}/${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js" || \
+		die "failed to cp thunderbird-gentoo-default-prefs.js"
 }
 
 pkg_postinst() {
 	#elog "For enigmail, please see instructions at"
 	#elog "  http://enigmail.mozdev.org/"
-
-	ewarn "Enigmail or probably any other extension won't work"
-	ewarn "with Thunderbird 3.0."
 
 	if use x86; then
 		if ! has_version 'gnome-base/gconf' || ! has_version 'gnome-base/orbit' \
@@ -159,9 +150,4 @@ pkg_postinst() {
 		einfo "Crashreporter won't work on amd64"
 		einfo
 	fi
-	update_mozilla_launcher_symlinks
-}
-
-pkg_postrm() {
-	update_mozilla_launcher_symlinks
 }
