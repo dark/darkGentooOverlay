@@ -8,7 +8,7 @@ depend() {
 }
 
 start() {
-	if ! test -f "${AMULEHOME}/.aMule/amule.conf"; then
+	if ! test -f "${AMULEHOME}/.aMuleAdunanzA/amule.conf"; then
 		eerror "You must start and configure amuled before launch it. Sorry."
 		return 1
 	fi
