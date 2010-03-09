@@ -1,5 +1,5 @@
->=app-admin/eselect-python-20090804
->=app-editors/gedit-2.15.2[python] dev-python/gnome-python dev-python/dbus-python dev-tex/rubber
+>=app-admin/eselect-python-20091230
+>=app-editors/gedit-2.15.2[python] dev-python/gnome-python dev-python/dbus-python dev-tex/rubber >=app-admin/eselect-python-20091230
 0
 mirror://sourceforge/gedit-latex/LaTeXPlugin-0.2rc2.tar.gz
 
