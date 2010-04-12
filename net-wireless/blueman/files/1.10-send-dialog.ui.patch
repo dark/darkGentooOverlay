@@ -1,0 +1,11 @@
+--- data/ui/send-dialog.ui	2009-03-31 22:59:38.000000000 +0700
++++ data/ui/send-dialog.ui	2009-10-18 07:45:00.000000000 +0700
+@@ -158,7 +158,7 @@
+       <action-widget response="0">b_cancel</action-widget>
+     </action-widgets>
+   </object>
+-  <object class="GtkImage" id="image1">
++  <object class="GtkImage" id="image2">
+     <property name="visible">True</property>
+     <property name="stock">gtk-redo</property>
+     <property name="icon-size">4</property>

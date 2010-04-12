@@ -1,0 +1,22 @@
+dev-libs/glib:2 >=x11-libs/gtk+-2.12:2 x11-libs/startup-notification >=dev-lang/python-2.5 dev-python/pygobject net-wireless/bluez nls? ( dev-util/intltool sys-devel/gettext ) dev-util/pkgconfig >=dev-python/pyrex-0.9.8 >=app-admin/eselect-python-20091230
+dev-libs/glib:2 >=x11-libs/gtk+-2.12:2 x11-libs/startup-notification >=dev-lang/python-2.5 dev-python/pygobject net-wireless/bluez >=app-mobilephone/obex-data-server-0.4.4 gnome-extra/policykit-gnome x11-misc/notification-daemon sys-apps/dbus dev-python/pygtk dev-python/notify-python dev-python/dbus-python gnome? ( dev-python/gconf-python ) network? ( || ( net-dns/dnsmasq =net-misc/dhcp-3* ) ) >=app-admin/eselect-python-20091230
+0
+http://download.tuxfamily.org/blueman/blueman-1.10.tar.gz
+
+http://blueman-project.org/
+GPL-3
+GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks.
+~amd64 ~ppc ~x86
+eutils multilib portability python toolchain-funcs
+gnome network nls
+
+
+
+2
+
+configure install postinst postrm prepare unpack
+
+
+
+
+
