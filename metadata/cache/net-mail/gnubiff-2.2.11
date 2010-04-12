@@ -1,4 +1,4 @@
->=x11-libs/gtk+-2.4 >=gnome-base/libglade-2.3 dev-libs/popt gnome? ( >=gnome-base/libgnome-2.2 >=gnome-base/libgnomeui-2.2 ) password? ( dev-libs/openssl ) fam? ( virtual/fam ) x11-proto/xproto dev-util/pkgconfig =sys-devel/automake-1.10* >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b
+>=x11-libs/gtk+-2.4 >=gnome-base/libglade-2.3 dev-libs/popt gnome? ( >=gnome-base/libgnome-2.2 >=gnome-base/libgnomeui-2.2 ) password? ( dev-libs/openssl ) fam? ( virtual/fam ) x11-proto/xproto dev-util/pkgconfig || ( =sys-devel/automake-1.11* =sys-devel/automake-1.10* ) >=sys-devel/autoconf-2.61 >=sys-devel/libtool-2.2.6b
 >=x11-libs/gtk+-2.4 >=gnome-base/libglade-2.3 dev-libs/popt gnome? ( >=gnome-base/libgnome-2.2 >=gnome-base/libgnomeui-2.2 ) password? ( dev-libs/openssl ) fam? ( virtual/fam ) x11-proto/xproto
 0
 mirror://sourceforge/gnubiff/gnubiff-2.2.11.tar.gz
