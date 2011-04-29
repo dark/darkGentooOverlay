@@ -303,18 +303,6 @@ diff -ur a/README b/README
  
  INSTALLATION
      see the INSTALL file
-@@ -40,8 +41,9 @@
-     is to take a screenshot if the 'import' program is available.
-     
- CONFIGURATION
--    /usr/etc/slim.conf is the main configuration file.
--    Options are explained in the file itself
-+    /etc/slim.conf is the main configuration file, or use the -f
-+    option.
-+    Options are explained in the file itself.
-     
- THEMES
-     See THEMES
 diff -ur a/slim.conf b/slim.conf
 --- a/slim.conf	2010-07-08 07:04:10.000000000 +0200
 +++ b/slim.conf	2011-04-06 15:09:13.000000000 +0200
