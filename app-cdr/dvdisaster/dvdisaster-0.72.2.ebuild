@@ -9,7 +9,8 @@ MY_P=${PN}-$(replace_version_separator 2 '.')
 
 DESCRIPTION="Data-protection and recovery tool for DVDs"
 HOMEPAGE="http://dvdisaster.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
+	http://dvdisaster.net/downloads/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
