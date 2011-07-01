@@ -7,7 +7,7 @@ http://www.adunanza.net/
 GPL-2
 aMule AdunanzA, software p2p per la comunita' fastweb
 ~x86
-autotools eutils flag-o-matic libtool multilib portability subversion toolchain-funcs wxwidgets
+autotools base eutils flag-o-matic libtool multilib portability subversion toolchain-funcs wxwidgets
 daemon debug geoip gtk nls remote stats unicode upnp
 
 
