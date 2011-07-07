@@ -6,7 +6,7 @@
  	[
 +	  $SVN::Core::VERSION lt '1.6' ? () :
 +	    @{SVN::Core::auth_get_platform_specific_client_providers(
-+	      undef,undef)}
++	      undef,undef)},
  	  SVN::Client::get_simple_provider(),
  	  SVN::Client::get_ssl_server_trust_file_provider(),
  	  SVN::Client::get_simple_prompt_provider(
