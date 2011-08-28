@@ -1,4 +1,4 @@
-virtual/opengl media-libs/libsdl media-libs/sdl-image dev-games/physfs media-libs/openal >=dev-util/cmake-2.8.1 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
+virtual/opengl media-libs/libsdl media-libs/sdl-image dev-games/physfs media-libs/openal >=dev-util/cmake-2.8.4 userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 virtual/opengl media-libs/libsdl media-libs/sdl-image dev-games/physfs media-libs/openal
 2
 mirror://berlios//supertux/supertux-0.3.1d.tar.bz2
