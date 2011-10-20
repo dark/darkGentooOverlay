@@ -1,0 +1,25 @@
+--- work-OLD/kernel/conftest.sh   2011-05-30 19:41:31.000000000 -0700
++++ work-NEW/kernel/conftest.sh   2011-05-30 19:47:23.000000000 -0700
+@@ -76,7 +76,9 @@
+ }
+ 
+ build_cflags() {
+-    BASE_CFLAGS="-D__KERNEL__ \
++    # Adding -Os optimizer option to work around rcupdate.h compiler bug, see here:
++    # http://choon.net/forum/read.php?21,82725
++    BASE_CFLAGS="-Os -D__KERNEL__ \
+ -DKBUILD_BASENAME=\"#conftest$$\" -DKBUILD_MODNAME=\"#conftest$$\" \
+ -nostdinc -isystem $ISYSTEM"
+ 
+--- work-OLD/kernel/nv-linux.h   2011-05-16 23:32:19.000000000 -0700
++++ work-NEW/kernel/nv-linux.h   2011-05-30 19:46:06.000000000 -0700
+@@ -34,6 +34,9 @@
+ #  error This driver does not support 2.5 kernels!
+ #elif LINUX_VERSION_CODE < KERNEL_VERSION(2, 7, 0)
+ #  define KERNEL_2_6
++#elif LINUX_VERSION_CODE >= KERNEL_VERSION(3, 0, 0)
++/* For compatibility, pretend all kernels 3.0.0 and higher are "2.6" */
++#  define KERNEL_2_6
+ #else
+ #  error This driver does not support development kernels!
+ #endif 
