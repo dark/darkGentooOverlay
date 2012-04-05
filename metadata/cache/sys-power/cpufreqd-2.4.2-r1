@@ -7,7 +7,7 @@ http://www.linux.it/~malattia/wiki/index.php/Cpufreqd
 GPL-2
 CPU Frequency Daemon
 amd64 ppc ~ppc64 ~sparc x86
-eutils flag-o-matic multilib portability toolchain-funcs user
+eutils flag-o-matic multilib toolchain-funcs user
 acpi apm debug lm_sensors nforce2 nvidia pmu
 
 

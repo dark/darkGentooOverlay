@@ -7,7 +7,7 @@ http://supertux.lethargik.org/
 GPL-2
 Classic 2D jump'n run sidescroller game similar to SuperMario: Milestone 2
 ~x86
-base cmake-utils eutils flag-o-matic games multilib portability toolchain-funcs user
+base cmake-utils eutils flag-o-matic games multilib toolchain-funcs user
 
 
 
