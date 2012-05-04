@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.6.ebuild,v 1.1 2011/06/27 19:56:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.8.6.ebuild,v 1.1 2012/04/26 21:47:30 robbat2 Exp $
 
-EAPI=3
+EAPI=4
 
 GENTOO_DEPEND_ON_PERL=no
 
@@ -11,7 +11,7 @@ PYTHON_DEPEND="python? 2"
 [[ ${PV} == *9999 ]] && SCM="git-2"
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/git/git.git"
 
-inherit toolchain-funcs eutils elisp-common perl-module bash-completion python ${SCM}
+inherit toolchain-funcs eutils elisp-common perl-module bash-completion-r1 python ${SCM}
 
 MY_PV="${PV/_rc/.rc}"
 MY_P="${PN}-${MY_PV}"
@@ -21,9 +21,17 @@ DOC_VER=${MY_PV}
 DESCRIPTION="GIT - the stupid content tracker, the revision control system heavily used by the Linux kernel team"
 HOMEPAGE="http://www.git-scm.com/"
 if [[ ${PV} != *9999 ]]; then
-	SRC_URI="mirror://kernel/software/scm/git/${MY_P}.tar.bz2
-			mirror://kernel/software/scm/git/${PN}-manpages-${DOC_VER}.tar.bz2
-			doc? ( mirror://kernel/software/scm/git/${PN}-htmldocs-${DOC_VER}.tar.bz2 )"
+	SRC_URI_SUFFIX="gz"
+	SRC_URI_GOOG="http://git-core.googlecode.com/files"
+	SRC_URI_KORG="mirror://kernel/software/scm/git"
+	SRC_URI="${SRC_URI_GOOG}/${MY_P}.tar.${SRC_URI_SUFFIX}
+			${SRC_URI_KORG}/${MY_P}.tar.${SRC_URI_SUFFIX}
+			${SRC_URI_GOOG}/${PN}-manpages-${DOC_VER}.tar.${SRC_URI_SUFFIX}
+			${SRC_URI_KORG}/${PN}-manpages-${DOC_VER}.tar.${SRC_URI_SUFFIX}
+			doc? (
+			${SRC_URI_KORG}/${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
+			${SRC_URI_GOOG}/${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
+			)"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 else
 	SRC_URI=""
@@ -38,7 +46,7 @@ IUSE="+blksha1 +curl cgi doc emacs gtk iconv +perl +python ppcsha1 tk +threads +
 CDEPEND="
 	!blksha1? ( dev-libs/openssl )
 	sys-libs/zlib
-	perl?   ( dev-lang/perl[-build] )
+	perl?   ( dev-lang/perl[-build] dev-libs/libpcre )
 	tk?     ( dev-lang/tk )
 	curl?   (
 		net-misc/curl
@@ -82,15 +90,14 @@ fi
 SITEFILE=50${PN}-gentoo.el
 S="${WORKDIR}/${MY_P}"
 
+REQUIRED_USE="
+	cgi? ( perl )
+	cvs? ( perl )
+	subversion? ( perl )
+	webdav? ( curl )
+"
+
 pkg_setup() {
-	if ! use perl ; then
-		use cgi && ewarn "gitweb needs USE=perl, ignoring USE=cgi"
-		use cvs && ewarn "CVS integration needs USE=perl, ignoring USE=cvs"
-		use subversion && ewarn "git-svn needs USE=perl, it won't work"
-	fi
-	if use webdav && ! use curl ; then
-		ewarn "USE=webdav needs USE=curl. Ignoring"
-	fi
 	if use subversion && has_version dev-vcs/subversion && built_with_use --missing false dev-vcs/subversion dso ; then
 		ewarn "Per Gentoo bugs #223747, #238586, when subversion is built"
 		ewarn "with USE=dso, there may be weird crashes in git-svn. You"
@@ -139,7 +146,7 @@ exportmakeopts() {
 	use tk \
 		|| myopts="${myopts} NO_TCLTK=YesPlease"
 	use perl \
-		&& myopts="${myopts} INSTALLDIRS=vendor" \
+		&& myopts="${myopts} INSTALLDIRS=vendor USE_LIBPCRE=yes" \
 		|| myopts="${myopts} NO_PERL=YesPlease"
 	use python \
 		|| myopts="${myopts} NO_PYTHON=YesPlease"
@@ -179,12 +186,12 @@ exportmakeopts() {
 
 src_unpack() {
 	if [[ ${PV} != *9999 ]]; then
-		unpack ${MY_P}.tar.bz2
+		unpack ${MY_P}.tar.${SRC_URI_SUFFIX}
 		cd "${S}"
-		unpack ${PN}-manpages-${DOC_VER}.tar.bz2
+		unpack ${PN}-manpages-${DOC_VER}.tar.${SRC_URI_SUFFIX}
 		use doc && \
 			cd "${S}"/Documentation && \
-			unpack ${PN}-htmldocs-${DOC_VER}.tar.bz2
+			unpack ${PN}-htmldocs-${DOC_VER}.tar.${SRC_URI_SUFFIX}
 		cd "${S}"
 	else
 		git-2_src_unpack
@@ -246,6 +253,9 @@ src_prepare() {
 
 	# merged upstream
 	#epatch "${FILESDIR}"/git-1.7.5-interix.patch
+
+	# merged upstream
+	#epatch "${FILESDIR}"/git-1.7.6-interix.patch
 
 	# dark: enable integration with password providers in their default config
 	epatch "${FILESDIR}"/git-1.7.6-gitsvn-no-plaintext.patch
@@ -329,7 +339,7 @@ src_install() {
 	# Upstream does not ship this pre-built :-(
 	use doc && doinfo Documentation/{git,gitman}.info
 
-	dobashcompletion contrib/completion/git-completion.bash ${PN}
+	newbashcomp contrib/completion/git-completion.bash ${PN}
 
 	if use emacs ; then
 		elisp-install ${PN} contrib/emacs/git.{el,elc} || die
@@ -505,12 +515,7 @@ showpkgdeps() {
 pkg_postinst() {
 	use emacs && elisp-site-regen
 	use python && python_mod_optimize git_remote_helpers
-	use bash-completion && \
 		einfo "Please read /usr/share/bash-completion/git for Git bash completion"
-	if use subversion && has_version dev-vcs/subversion && ! built_with_use --missing false dev-vcs/subversion perl ; then
-		ewarn "You must build dev-vcs/subversion with USE=perl"
-		ewarn "to get the full functionality of git-svn!"
-	fi
 	elog "These additional scripts need some dependencies:"
 	echo
 	showpkgdeps git-quiltimport "dev-util/quilt"
