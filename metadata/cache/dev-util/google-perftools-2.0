@@ -1,0 +1,22 @@
+!64bitworkaround? ( sys-libs/libunwind )
+!64bitworkaround? ( sys-libs/libunwind )
+0
+http://gperftools.googlecode.com/files/gperftools-2.0.tar.gz
+
+http://code.google.com/p/gperftools/
+MIT
+Fast, multi-threaded malloc() and nifty performance analysis tools
+~amd64 ~x86 ~x86-fbsd
+eutils flag-o-matic multilib toolchain-funcs user
+largepages +debug minimal test 64bitworkaround
+
+
+
+4
+
+compile configure install prepare setup test
+
+
+
+
+
