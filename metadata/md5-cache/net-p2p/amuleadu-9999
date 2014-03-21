@@ -1,5 +1,5 @@
-DEFINED_PHASES=compile install preinst setup unpack
-DEPEND=!net-p2p/amule =x11-libs/wxGTK-2.8* >=dev-libs/crypto++-5.5.2 >=sys-libs/zlib-1.2.1 stats? ( >=media-libs/gd-2.0.26 ) geoip? ( dev-libs/geoip ) upnp? ( >=net-libs/libupnp-1.6.6 ) remote? ( >=media-libs/libpng-1.2.0 unicode? ( >=media-libs/gd-2.0.26 ) ) dev-vcs/subversion net-misc/rsync || ( >=sys-devel/automake-1.12 >=sys-devel/automake-1.13 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
+DEFINED_PHASES=compile install preinst unpack
+DEPEND=!net-p2p/amule =x11-libs/wxGTK-2.8* >=dev-libs/crypto++-5.5.2 >=sys-libs/zlib-1.2.1 stats? ( >=media-libs/gd-2.0.26 ) geoip? ( dev-libs/geoip ) upnp? ( >=net-libs/libupnp-1.6.6 ) remote? ( >=media-libs/libpng-1.2.0 unicode? ( >=media-libs/gd-2.0.26 ) ) dev-vcs/subversion net-misc/rsync !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.14 ) >=sys-devel/autoconf-2.68 sys-devel/libtool
 DESCRIPTION=aMule AdunanzA, software p2p per la comunita' fastweb
 HOMEPAGE=http://www.adunanza.net/
 IUSE=daemon debug geoip gtk nls remote stats unicode upnp
@@ -7,5 +7,5 @@ KEYWORDS=~x86
 LICENSE=GPL-2
 RDEPEND=!net-p2p/amule =x11-libs/wxGTK-2.8* >=dev-libs/crypto++-5.5.2 >=sys-libs/zlib-1.2.1 stats? ( >=media-libs/gd-2.0.26 ) geoip? ( dev-libs/geoip ) upnp? ( >=net-libs/libupnp-1.6.6 ) remote? ( >=media-libs/libpng-1.2.0 unicode? ( >=media-libs/gd-2.0.26 ) )
 SLOT=0
-_eclasses_=autotools	16761a2f972abd686713e5967ff3c754	eutils	4878e7f88afc0ba0866ac112190b0fd4	flag-o-matic	65cef1287b9d62b1a0f180765d1e0c69	libtool	b1c8688e60f9580bcb9bb46e08737eb1	multilib	892e597faee02a5b94eb02ab512e7622	multiprocessing	89580da5ec17ad687fcde876c542b91e	subversion	de38ef8c5baf84d80e695a4d6ad26554	toolchain-funcs	51e6c948e72c43bcc8edc7544411c953	user	d0a4d0735a6c0183d707ca919bd72f28	wxwidgets	3315ffba81a98dea5d9837edb418a587
+_eclasses_=autotools	5256b4f4c1798109f39f308f9f7eaf5f	eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	libtool	b9b3340e3a19510f0d9f05cfccbf209f	multilib	fac675dcccf94392371a6abee62d909f	multiprocessing	c2d96fb38f2596209e98fceda58ba1ed	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	wxwidgets	755f4b28ecdf7c1213011108e566babc
 _md5_=8d07b5598b3573d4852c329b62aab807
