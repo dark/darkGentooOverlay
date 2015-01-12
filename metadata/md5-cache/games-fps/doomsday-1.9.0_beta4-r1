@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/opengl virtual/glu media-libs/libsdl media-libs/sdl-mixer media-libs/sdl-net media-libs/libpng x11-libs/libXext openal? ( media-libs/openal ) games-misc/games-envd
 SLOT=0
 SRC_URI=mirror://sourceforge/deng/deng-1.9.0-beta4.tar.gz
-_eclasses_=base	ec46b36a6f6fd1d0b505a33e0b74e413	eutils	af81d52c25ec93fbdff71e0efb0de7b7	games	016d5de1968de77e56a90938ed6e5aba	multilib	fac675dcccf94392371a6abee62d909f	toolchain-funcs	48b38a216afb92db6314d6c3187abea3	user	d0a4d0735a6c0183d707ca919bd72f28
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	c91a1ac3fefc6b077094fb2e82c65af4	games	e221fed675714bd5545b7488aed9f822	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=b397e04b6590feed12a32e8f32053164

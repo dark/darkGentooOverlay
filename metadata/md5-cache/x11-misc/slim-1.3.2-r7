@@ -11,5 +11,5 @@ RDEPEND=x11-libs/libXmu x11-libs/libX11 x11-libs/libXpm x11-libs/libXft >=media-
 REQUIRED_USE=consolekit? ( pam )
 SLOT=0
 SRC_URI=mirror://berlios/slim/slim-1.3.2.tar.gz
-_eclasses_=eutils	af81d52c25ec93fbdff71e0efb0de7b7	flag-o-matic	9a539029fe1d390c1828ff633baf26b5	multilib	fac675dcccf94392371a6abee62d909f	pam	5c1a9ef4892062f9ec25c8ef7c1f1e52	toolchain-funcs	48b38a216afb92db6314d6c3187abea3
+_eclasses_=eutils	c91a1ac3fefc6b077094fb2e82c65af4	flag-o-matic	eda1c0b5ba85b3eeb555a071d69eb819	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac
 _md5_=fdb2380f4f992864dad16587d2f4988e
