@@ -22,7 +22,8 @@ DEPEND="net-firewall/ebtables
 	 dev-libs/libev
 	 dev-lang/tk
 	 dev-tcltk/tkimg
-	 x11-terms/xterm"
+	 x11-terms/xterm
+	 media-gfx/imagemagick"
 RDEPEND="${DEPEND}"
 
 src_install() {
