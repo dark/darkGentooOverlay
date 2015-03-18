@@ -7,5 +7,5 @@ KEYWORDS=~x86
 LICENSE=GPL-2
 RDEPEND=!net-p2p/amule =x11-libs/wxGTK-2.8* >=dev-libs/crypto++-5.5.2 >=sys-libs/zlib-1.2.1 stats? ( >=media-libs/gd-2.0.26 ) geoip? ( dev-libs/geoip ) upnp? ( >=net-libs/libupnp-1.6.6 ) remote? ( >=media-libs/libpng-1.2.0 unicode? ( >=media-libs/gd-2.0.26 ) )
 SLOT=0
-_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	0dfbfa13f57c6184f4728d12ac002aac	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
+_eclasses_=autotools	8fc2dd333ef9346c906ffd9a523d8211	eutils	998e5931fb95b10a6a11ec796ada2759	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	a3db8057ea0903a9ebea4e46aab28ff9	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
 _md5_=8d07b5598b3573d4852c329b62aab807
