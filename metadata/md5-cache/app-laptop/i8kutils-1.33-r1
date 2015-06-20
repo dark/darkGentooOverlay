@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=tk? ( >=dev-lang/tk-8.3.3 )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/i/i8kutils/i8kutils_1.33.tar.gz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	b99aa37f734b5d426efd83b2f271cece
+_eclasses_=multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=c2c5b97fe8efd8fc4efd31b4d8fc5467
