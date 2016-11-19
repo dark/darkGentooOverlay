@@ -29,10 +29,9 @@ DEPEND="!net-p2p/amule
 		unicode? ( >=media-libs/gd-2.0.26 )
 	)"
 
-
 src_unpack() {
 	subversion_src_unpack
-        AT_M4DIR="m4" eautoreconf
+	AT_M4DIR="m4" eautoreconf
 	elibtoolize
 }
 
@@ -67,7 +66,7 @@ src_compile() {
 			--disable-amule-gui"
 	fi
 
-        econf \
+	econf \
 		--disable-dependency-tracking \
 		--with-wx-config=${WX_CONFIG} \
 		--with-wxbase-config=${WX_CONFIG} \
