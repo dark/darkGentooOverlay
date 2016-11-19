@@ -1,4 +1,4 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -18,11 +18,9 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=">=virtual/jdk-1.5
- 		 media-libs/libpng:1.2"
+		 media-libs/libpng:1.2"
 
 S="${PN}"
 src_install() {
 	cp -rf "${S}/usr" "${D}/"
 }
-
-
