@@ -26,7 +26,7 @@ MOZ_P="${MOZ_PN}-${MOZ_PV}"
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MOZ_PN}/releases/"
 
-inherit eutils multilib pax-utils fdo-mime gnome2-utils mozlinguas nsplugins
+inherit eutils multilib pax-utils fdo-mime gnome2-utils mozlinguas-v2 nsplugins
 
 DESCRIPTION="Firefox Web Browser"
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MOZ_PN}/releases"
