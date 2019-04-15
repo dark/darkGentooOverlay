@@ -1,6 +1,5 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
 
 EAPI="2"
 
@@ -8,7 +7,7 @@ inherit libtool
 
 DESCRIPTION="Tool for retrieving information and extracting data from mpq archives"
 HOMEPAGE="https://libmpq.org/wiki/MpqTools"
-SRC_URI="https://libmpq.org/downloader/download/file/4/${P}.tar.gz"
+SRC_URI="https://libmpq.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
