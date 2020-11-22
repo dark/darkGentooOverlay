@@ -1,0 +1,9 @@
+DEFINED_PHASES=-
+DESCRIPTION=Meta package for Steam games: Antichamber
+EAPI=7
+HOMEPAGE=https://steampowered.com
+KEYWORDS=amd64
+LICENSE=metapackage
+RDEPEND=media-libs/libvorbis[abi_x86_32] media-libs/libogg[abi_x86_32] media-sound/apulse[abi_x86_32] media-libs/alsa-lib[abi_x86_32]
+SLOT=0
+_md5_=9275140ea10a474f026ac58a14ab2695
