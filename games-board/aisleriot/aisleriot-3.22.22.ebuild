@@ -46,15 +46,12 @@ src_configure() {
 	local emesonargs=(
 		-Dtheme_kde=false
 		-Dtheme_svg_qtsvg=true
+		-Ddocs=false
 	)
 
 	if use doc; then
 		emesonargs+=(
-			-Ddocs=true
-		)
-	else
-		emesonargs+=(
-			-Ddocs=false
+			-Dhelp_method=library
 		)
 	fi
 	meson_src_configure
