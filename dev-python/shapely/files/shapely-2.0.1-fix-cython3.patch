@@ -1,0 +1,12 @@
+diff -ur shapely-2.0.1.orig/shapely/_geos.pyx shapely-2.0.1/shapely/_geos.pyx
+--- shapely-2.0.1.orig/shapely/_geos.pyx	2023-09-24 09:55:11.592377368 -0700
++++ shapely-2.0.1/shapely/_geos.pyx	2023-01-29 23:49:38.000000000 -0800
+@@ -8,7 +8,7 @@
+ from shapely import GEOSException
+ 
+ 
+-cdef void geos_message_handler(const char* message, void* userdata):
++cdef void geos_message_handler(const char* message, void* userdata) noexcept:
+     snprintf(<char *>userdata, 1024, "%s", message)
+ 
+ 
