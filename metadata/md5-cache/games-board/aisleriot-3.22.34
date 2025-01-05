@@ -1,6 +1,6 @@
 BDEPEND=app-arch/xz-utils >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
-DEPEND=>=dev-libs/glib-2.32:2 >=dev-scheme/guile-2.2:12 >=gnome-base/librsvg-2.32:2 >=media-libs/libcanberra-0.26[gtk3] >=x11-libs/cairo-1.10 >=x11-libs/gtk+-3.4:3 gnome? ( >=gnome-base/gconf-2.0:2 ) qt5? ( >=dev-qt/qtsvg-5:5 ) app-arch/gzip app-text/yelp-tools dev-libs/libxml2:2 dev-util/glib-utils dev-build/autoconf-archive >=sys-devel/gettext-0.12 virtual/pkgconfig gnome? ( app-text/docbook-xml-dtd:4.3 )
+DEPEND=>=dev-libs/glib-2.32:2 >=dev-scheme/guile-2.2:2.2 >=gnome-base/librsvg-2.32:2 >=media-libs/libcanberra-0.26[gtk3] >=x11-libs/cairo-1.10 >=x11-libs/gtk+-3.4:3 gnome? ( >=gnome-base/gconf-2.0:2 ) qt5? ( >=dev-qt/qtsvg-5:5 ) app-arch/gzip app-text/yelp-tools dev-libs/libxml2:2 dev-util/glib-utils dev-build/autoconf-archive >=sys-devel/gettext-0.12 virtual/pkgconfig gnome? ( app-text/docbook-xml-dtd:4.3 )
 DESCRIPTION=A collection of solitaire card games for GNOME
 EAPI=8
 HOMEPAGE=https://wiki.gnome.org/action/show/Apps/Aisleriot
@@ -12,4 +12,4 @@ LICENSE=GPL-3 LGPL-3 FDL-1.3
 SLOT=0
 SRC_URI=https://gitlab.gnome.org/GNOME/aisleriot/-/archive/3.22.34/aisleriot-3.22.34.tar.gz
 _eclasses_=flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	gnome.org	e1b4f392dbfedfb8974b71b017937f08	gnome2-utils	a8cf148ec7f5ae0b1f1d33ae5f7f9e88	meson	99466844dd8d4fcfb07578a76f5a9922	multilib	b2a329026f2e404e9e371097dda47f96	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	python-utils-r1	42c5abe4a656a4993a06a4fc61dbdd12	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	toolchain-funcs	14648d8795f7779e11e1bc7cf08b7536	xdg	3ef49a87c52c8b77c476351195dfe575	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
-_md5_=9982a13a028c12aaced78dd2eda51206
+_md5_=11a26de4b0e0c88046d0bc5544d8b23c

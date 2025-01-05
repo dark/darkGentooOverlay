@@ -19,7 +19,7 @@ IUSE="debug doc gnome qt5"
 # Lookup guile modules grep "use-modules" *.scm
 COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2
-	>=dev-scheme/guile-2.2:12
+	>=dev-scheme/guile-2.2:2.2
 	>=gnome-base/librsvg-2.32:2
 	>=media-libs/libcanberra-0.26[gtk3]
 	>=x11-libs/cairo-1.10
