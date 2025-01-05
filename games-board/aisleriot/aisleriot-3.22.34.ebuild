@@ -32,7 +32,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/yelp-tools
 	dev-libs/libxml2:2
 	dev-util/glib-utils
-	sys-devel/autoconf-archive
+	dev-build/autoconf-archive
 	>=sys-devel/gettext-0.12
 	virtual/pkgconfig
 	gnome? ( app-text/docbook-xml-dtd:4.3 )
