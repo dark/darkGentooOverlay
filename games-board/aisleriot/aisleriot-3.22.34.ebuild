@@ -1,4 +1,4 @@
-# Copyright 1999-2022 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -21,7 +21,10 @@ COMMON_DEPEND="
 	>=dev-libs/glib-2.32:2
 	>=dev-scheme/guile-2.2:2.2
 	>=gnome-base/librsvg-2.32:2
-	>=media-libs/libcanberra-0.26[gtk3]
+	|| (
+		media-libs/libcanberra-gtk3
+		media-libs/libcanberra[gtk3(-)]
+	)
 	>=x11-libs/cairo-1.10
 	>=x11-libs/gtk+-3.4:3
 	gnome? ( >=gnome-base/gconf-2.0:2 )
